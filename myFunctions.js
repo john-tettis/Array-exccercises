@@ -1,6 +1,6 @@
 let colors = ['red','orange','yellow','purple','blue']
 
-
+//custom array methods
 function myForEach(array, func){
     for(let i=0; i<array.length; i++){
         func(array[i], i, array);
@@ -20,6 +20,36 @@ function myFilter(array, func){
     }
     return newArr;
 }
+
+function mySome(array, func){
+    let final= false;
+    array.forEach(function(val){
+        if(func(val)){
+            final =true;
+        }
+    })
+    return final;
+}
+function myEvery(array, func){
+    let final =0;
+    array.forEach(function(val){
+        if(func(val)){
+            final++;
+        }
+    })
+    return final === array.length;
+
+}
+
+
+
+
+
+
+
+
+
+
 function capitalize(word){
     return word.toUpperCase();
 }
