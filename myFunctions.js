@@ -40,6 +40,26 @@ function myEvery(array, func){
     return final === array.length;
 
 }
+function myFind(arr, func){
+    let answer;
+    for(let val of arr){
+        if (func(val)){
+            answer = val;
+            break;
+        }
+    }
+    return answer;
+}
+function myFindIndex(arr, func){
+    let answer;
+    for(let [i, val] of arr.entries()){
+        if (func(val)){
+            answer = i;
+            break;
+        }
+    }
+    return answer;
+}
 
 
 
